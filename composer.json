@@ -1,0 +1,37 @@
+{
+    "name": "nadaft/laraspa",
+    "description": "Laravel REST API React Scaffolding with Authentication.",
+    "keywords": ["laravel", "auth", "rest", "api", "react"],
+    "type": "library",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/nadaft/laraspa/issues",
+        "source": "https://github.com/nadaft/laraspa"
+    },
+    "authors": [
+        {
+            "name": "Nur Hasan Najibullah",
+            "email": "mail@nadaft.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nadaft\\Laraspa\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nadaft\\Laraspa\\LaraspaServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
