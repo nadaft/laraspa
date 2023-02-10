@@ -57,7 +57,7 @@ Then, you must install your node modules using your favorite package manager to 
 Run the following command
 
 ```bash
-composer require nadaft/laraspa
+composer require nadaft/laraspa --dev
 ```
 
 (Optional) if package is not discover automatically, add the service provider to your config/app.php providers array:
