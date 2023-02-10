@@ -50,7 +50,7 @@ composer require nadaft/laraspa
 
 (Optional) if package is not discover automatically, add the service provider to your config/app.php providers array:
 
-```bash
+```php
 Nadaft\Laraspa\LaraspaServiceProvider::class,
 ```
 
