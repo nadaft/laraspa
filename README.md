@@ -1,4 +1,16 @@
-![Login Page](https://raw.githubusercontent.com/nadaft/laraspa/master/assets/login.png)
+<p align="center"><img src="/assets/login.png" alt="Login Page"></p>
+
+<p align="center">
+    <a href="https://packagist.org/packages/nadaft/laraspa">
+        <img src="https://img.shields.io/packagist/dt/nadaft/laraspa" alt="Total Downloads">
+    </a>
+    <a href="https://packagist.org/packages/nadaft/laraspa">
+        <img src="https://img.shields.io/packagist/v/nadaft/laraspa" alt="Latest Stable Version">
+    </a>
+    <a href="https://packagist.org/packages/nadaft/laraspa">
+        <img src="https://img.shields.io/packagist/l/nadaft/laraspa" alt="License">
+    </a>
+</p>
 
 # LaraSPA
 
