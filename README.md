@@ -14,7 +14,7 @@
 
 # LaraSPA
 
-A Laravel package to scaffolding Laravel REST API React. Implement REST API for the backend and React for the frontend.
+A Laravel package that scaffolds a Laravel REST API and React application. The package implements a REST API for the backend and React for the frontend.
 
 ## Features
 
@@ -24,43 +24,56 @@ A Laravel package to scaffolding Laravel REST API React. Implement REST API for 
 - React Helmet
 - React Toastify
 - TailwindCSS and Tailwind Merge
-- Ide Helper Included (Laravel Debugbar and Ide Helper)
-- Backend API testing implemented
-- Login, Register, Reset Password, Resend Email Verification and Dashboard Page.
-- Authentication with protected routes
+- Includes Laravel Debugbar and Ide Helper
+- Implemented backend API testing
+- Includes Login, Register, Reset Password, Resend Email Verification, and Dashboard Pages
+- Includes protected routes for authentication
 
 ## How to install
 
 ### 1. First you need a fresh Laravel installation
 
-If you have already, skip this step. We recommend to start your application with a fresh Laravel installation, because it will replace your current laravel application files.
+If you don't already have one, start by creating a fresh Laravel installation. We recommend starting with a fresh installation because the package will replace your current Laravel application files.
 
-Run the following command
+To create a fresh installation, run the following command:
 
 ```bash
 laravel new your-app-name
 ```
 
-Wait until installation is complete. Then run the following command
+Once the installation is complete, run the following command:
 
 ```bash
 php artisan migrate
 ```
 
-Then, you must install your node modules using your favorite package manager to install. 
+Next, install the necessary node modules using your preferred package manager (npm, yarn, or pnpm):
 
-`npm install` or `yarn install` or `pnpm install`. 
+```bash
+npm install
+```
 
+or
+
+```bash
+yarn install
+```
+
+or
+
+```bash
+pnpm install
+```
 
 ### 2. Install the Package
 
-Run the following command
+Run the following command:
 
 ```bash
 composer require nadaft/laraspa --dev
 ```
 
-(Optional) if package is not discover automatically, add the service provider to your config/app.php providers array:
+(Optional) If the package isn't discovered automatically, add the service provider to your config/app.php providers array:
 
 ```php
 Nadaft\Laraspa\LaraspaServiceProvider::class,
@@ -68,19 +81,19 @@ Nadaft\Laraspa\LaraspaServiceProvider::class,
 
 ### 3. Install Laraspa
 
-Run the following command
+Run the following command:
 
 ```bash
 php artisan laraspa:install
 ```
 
-Wait until installation process is complete. Then run the command
+Wait for the installation process to complete. Then, run the following command:
 
 ```bash
 php artisan serve
 ```
 
-Finally your Laravel App is ready.
+Your Laravel App is now ready to use.
 
 ## Screenshots
 
