@@ -87,6 +87,8 @@ Run the following command:
 php artisan laraspa:install
 ```
 
+During the installation process, you will be prompted to choose whether or not to use ESLint for your Laravel application. If you choose to use it, the necessary dependencies and configuration files will be installed. If you choose not to use it, the installation will proceed without installing ESLint.
+
 Wait for the installation process to complete. Then, run the following command:
 
 ```bash
