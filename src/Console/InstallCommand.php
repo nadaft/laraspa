@@ -10,15 +10,28 @@ use Symfony\Component\Process\Process;
 
 class InstallCommand extends Command
 {
-    use InstallApiStack, InstallReactStack;
+    use InstallApiStack, InstallReactStack, InstallEslint;
 
     protected $signature = 'laraspa:install {--composer=global : Absolute path to the Composer binary which should be used to install packages}';
 
     protected $description = 'Install the Laraspa controllers and resources';
 
+    protected $withEslint = "NO";
+
     public function handle()
     {
+        $this->withEslint = $this->choice(
+            "Install ESLint, Prettier and Airbnb Standard?",
+            ["NO", "YES"],
+            "NO"
+        );
+
         $this->installApiStack();
+
+        if ($this->withEslint === "YES") {
+            $this->installEslint();
+        }
+
         $this->installReactStack();
     }
 

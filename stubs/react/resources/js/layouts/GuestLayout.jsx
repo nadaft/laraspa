@@ -1,25 +1,29 @@
-import React from 'react'
-import { Navigate, Outlet } from 'react-router-dom'
-import { store } from '@/store';
+import React from 'react';
+import { Navigate, Outlet } from 'react-router-dom';
+import store from '@/store';
 
-const GuestLayout = () => {
+function GuestLayout() {
   const state = store.getState();
 
   const { token } = state.auth;
 
   if (token) {
-    return <Navigate to='/dashboard' />
+    return <Navigate to="/dashboard" />;
   }
 
   return (
-    <div className='flex h-screen'>
-      <div className='flex-col items-center justify-center flex-grow hidden p-4 bg-blue-700 gap-y-2 md:flex'>
-        <h2 className='text-4xl font-bold text-white'>LaraSPA</h2>
-        <p className='text-lg font-light text-center text-white'>Laravel REST API React Scaffolding with Authentication</p>
+    <div className="flex h-screen">
+      <div className="hidden flex-grow flex-col items-center justify-center gap-y-2 bg-blue-700 p-4 md:flex">
+        <h2 className="text-4xl font-bold text-white">LaraSPA</h2>
+        <p className="text-center text-lg font-light text-white">
+          Laravel REST API React Scaffolding with Authentication
+        </p>
       </div>
-      <div className='w-full md:w-[480px]'><Outlet /></div>
+      <div className="w-full md:w-[480px]">
+        <Outlet />
+      </div>
     </div>
-  )
+  );
 }
 
-export default GuestLayout
+export default GuestLayout;

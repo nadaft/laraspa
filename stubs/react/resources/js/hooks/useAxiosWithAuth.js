@@ -1,7 +1,7 @@
-import { store } from '@/store';
-import { logout } from '@/store/auth.slice';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import store from '@/store';
+import { logout } from '@/store/auth.slice';
 
 const useAxiosWithAuth = () => {
   const state = store.getState();
@@ -20,13 +20,15 @@ const useAxiosWithAuth = () => {
     },
     (error) => {
       // redirect to login if response unauthenticated
-      if (error.response.status == 401) {
+      if (error.response.status === 401) {
+        // eslint-disable-next-line no-alert
         alert(error.response.statusText);
         store.dispatch(logout());
         navigate('/login');
         return;
       }
 
+      // eslint-disable-next-line consistent-return
       return Promise.reject(error);
     }
   );

@@ -1,16 +1,17 @@
-import { store } from '@/store'
+import React from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
+import store from '@/store';
 
-const ProtectedAuthRoutes = () => {
+function ProtectedAuthRoutes() {
   const state = store.getState();
 
-  const token = state.auth.token;
+  const { token } = state.auth;
 
   if (!token) {
-    return <Navigate to='/login' />
+    return <Navigate to="/login" />;
   }
 
-  return <Outlet />
+  return <Outlet />;
 }
 
-export default ProtectedAuthRoutes
+export default ProtectedAuthRoutes;

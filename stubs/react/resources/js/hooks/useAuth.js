@@ -1,6 +1,6 @@
-import { store } from '@/store';
-import { logout, setAuth } from '@/store/auth.slice';
 import axios from 'axios';
+import store from '@/store';
+import { logout, setAuth } from '@/store/auth.slice';
 import useAxiosWithAuth from './useAxiosWithAuth';
 
 const useAuth = () => {
@@ -10,8 +10,8 @@ const useAuth = () => {
 
   return {
     login: (payload) => {
-      return new Promise(async (resolve, reject) => {
-        await axios
+      return new Promise((resolve, reject) => {
+        axios
           .post('/api/auth/login', payload)
           .then((res) => {
             store.dispatch(
@@ -38,8 +38,9 @@ const useAuth = () => {
     },
 
     logout: () => {
-      return new Promise(async (resolve, reject) => {
-        await axiosAuth.delete('/api/auth/logout')
+      return new Promise((resolve, reject) => {
+        axiosAuth
+          .delete('/api/auth/logout')
           .then((res) => {
             store.dispatch(logout());
 
@@ -47,7 +48,7 @@ const useAuth = () => {
           })
           .catch((err) => {
             reject(err.response.data);
-          })
+          });
       });
     },
   };
