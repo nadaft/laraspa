@@ -23,11 +23,12 @@ A Laravel package that scaffolds a Laravel REST API and React application. The p
 - React Redux Toolkit
 - React Helmet
 - React Toastify
-- TailwindCSS and Tailwind Merge
+- TailwindCSS, Tailwind Merge and Automatic Class Sorting with Prettier
 - Includes Laravel Debugbar and Ide Helper
 - Implemented backend API testing
 - Includes Login, Register, Reset Password, Resend Email Verification, and Dashboard Pages
 - Includes protected routes for authentication
+- Optionally you can use ESLint, Prettier and Airbnb Standard. You can choice use it or not during the installation.
 
 ## How to install
 
